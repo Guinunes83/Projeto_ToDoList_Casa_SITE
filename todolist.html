@@ -4,7 +4,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="CSS/Style.css">
+    <link rel="stylesheet" href="Style.css">
     <!--font -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -29,6 +29,14 @@
 
     <section id="corpo">
         <div class="campo-central">
+            <h2>Lista de Tarefas</h2>
+            <div id="add-tarefas">
+                <input id="texto-tarefa" type="text" placeholder="Digite a Tarefa" name="texto-tarefa">
+                <button onclick="adicionarTarefa()">Adicionar</button>
+            </div>
+            <ul id="lista-tarefas">
+                <li class="tarefas">Lavar a roupa <span>❌</span></li>
+            </ul>
 
         </div>
 
@@ -40,5 +48,5 @@
     </footer>
 
 </body>
-
+<script src="Script.js"></script>
 </html>

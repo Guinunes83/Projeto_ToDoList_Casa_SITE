@@ -17,25 +17,26 @@
         <div id = "cabecalho">
             <h1>OrganizaLar</h1>
         </div>
+        <nav id="conteinerMenuTopo">
+            <ul id="menuTopo">
+                <li><a href="/index.html">Home</a></li>
+                <li><a href="/tarefas.html">Tarefas</a></li>
+                <li><a href="/compras.html">Compras</a></li>
+                <li><a href="#">Finanças</a></li>
+                <li><a href="#">Receitas</a></li>
+                <li><a href="#">Calendario</a></li>
+            </ul>
+        </nav>
+
     </header>
 
-    <nav>
-        <ul id="menu-topo">
-            <li><a href="/index.html">Home</a></li>
-            <li><a href="/todolist.html">Tarefas</a></li>
-            <li><a href="#">Finanças</a></li>
-            <li><a href="#">Compras</a></li>
-            <li><a href="#">Receitas</a></li>
-            <li><a href="#">Calendario</a></li>
-        </ul>
-    </nav>
 
     <section id="corpo">
         <div class="campo-central">
             <h2>Lista de Tarefas</h2>
             <div id="add-tarefas">
                 <input id="texto-tarefa" type="text" placeholder="Digite a Tarefa" name="texto-tarefa">
-                <button onclick="adicionarTarefa()">Adicionar</button>
+                <button id="botaoAdicionar"onclick="adicionarTarefa()">Adicionar</button>
             </div>
             <ul id="listaTarefas">
             </ul>

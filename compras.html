@@ -8,9 +8,7 @@
     <!--font -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link
-        href="https://fonts.googleapis.com/css2?family=Berkshire+Swash&family=DM+Sans:ital,opsz,wght@0,9..40,100..1000;1,9..40,100..1000&display=swap"
-        rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Berkshire+Swash&family=DM+Sans:ital,opsz,wght@0,9..40,100..1000;1,9..40,100..1000&display=swap" rel="stylesheet">    
     <title>OrganizaLar</title>
 </head>
 
@@ -29,13 +27,21 @@
                 <li><a href="#">Calendario</a></li>
             </ul>
         </nav>
+
     </header>
-
     <section id="corpo">
-        <div class="campo-central">
-
-        </div>
-
+        <h2>Lista de Compras</h2>
+        <section id="conteinerListaCompras">
+            <input type="number" name="quantidade" id="quantidadeItens" placeholder="0" min="0" max="100">
+                <select name="Tipo" id="tipoItem">
+                    <option value="Alimento">Alimento</option>
+                    <option value="Limpeza">Limpeza</option>
+                    <option value="Higiene">Higiene</option>
+                    <option value="Outros">Outros</option>
+                </select>
+            <input type="text" name="Itens" id="itemCompra" placeholder="Digite o Item">
+            <button id="botaoAdicionar"type="button">Adicionar</button>
+        </section>
     </section>
 
     <footer id="rodape">
@@ -45,5 +51,4 @@
 
 </body>
 <script src="Script.js"></script>
-
 </html>

@@ -5,45 +5,38 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="Style.css">
-    <!--font -->
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Berkshire+Swash&family=DM+Sans:ital,opsz,wght@0,9..40,100..1000;1,9..40,100..1000&display=swap" rel="stylesheet">    
-    <title>OrganizaLar</title>
 </head>
 
 <body>
-    <header>
-        <div id = "cabecalho">
-            <h1>OrganizaLar</h1>
-        </div>
+    <header id="cabecalho">
+        <h1>OrganizaLar</h1>
         <nav id="conteinerMenuTopo">
             <ul id="menuTopo">
-                <li><a href="/index.html">Home</a></li>
-                <li><a href="/tarefas.html">Tarefas</a></li>
-                <li><a href="/compras.html">Compras</a></li>
-                <li><a href="#">Finanças</a></li>
-                <li><a href="#">Receitas</a></li>
-                <li><a href="#">Calendario</a></li>
+                <li><a href="/index.html">HOME</a></li>
+                <li><a href="/tarefas.html">TAREFAS</a></li>
+                <li><a href="#">COMPRAS</a></li>
+                <li><a href="#">FINANÇAS</a></li>
+                <li><a href="#">RECEITAS</a></li>
+                <li><a href="#">EVENTOS</a></li>
             </ul>
+
         </nav>
 
     </header>
 
+    <main id="corpo">
+        <h2>Lista de Tarefas</h2>
+        <section id="campoAddTarefas">
+            <input type="date" name="Data" id="dataTarefa">
+            <input id="textoTarefa" type="text" placeholder="Digite a Tarefa" name="texto-tarefa">
+            <button class="botaoAdicionarTarefa" id="botaoAdicionarTarefas" onclick="adicionarTarefa()">Adicionar</button>
+        </section>
 
-    <section id="corpo">
-        <div class="campo-central">
-            <h2>Lista de Tarefas</h2>
-            <div id="add-tarefas">
-                <input id="texto-tarefa" type="text" placeholder="Digite a Tarefa" name="texto-tarefa">
-                <button id="botaoAdicionar"onclick="adicionarTarefa()">Adicionar</button>
-            </div>
-            <ul id="listaTarefas">
-            </ul>
+        <section id="listaTarefas">
+            <ul > </ul>
+        </section>
 
-        </div>
-
-    </section>
+    </main>
 
     <footer id="rodape">
         <p>rodapé</p>
@@ -52,4 +45,5 @@
 
 </body>
 <script src="Script.js"></script>
+
 </html>

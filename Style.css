@@ -1,9 +1,10 @@
-@import url('https://fonts.googleapis.com/css2?family=Coiny&family=DM+Sans:ital,opsz,wght@0,9..40,100..1000;1,9..40,100..1000&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Coiny&family=DM+Sans:ital,opsz,wght@0,9..40,100..1000;1,9..40,100..1000&family=Fascinate&display=swap');
 
 :root {
     --color-azul: #3333ff;
     --color-azulClaro: #19ABE0;
-    --fonte-titulo: "Coiny", system-ui;
+    --fonte-titulo: "Fascinate", system-ui;
+    --fonte-menu: "Coiny", system-ui;
     --fonte-texto: "DM Sans", sans-serif;
 }
 
@@ -20,9 +21,15 @@ body {
     background-color: black;
     color: white;
     font-family: var(--fonte-texto);
+    color: var(--color-azul);
+
 }
 
-#cabecalho h1 {
+header {
+    height: 200px;
+}
+
+h1 {
     font-family: var(--fonte-titulo);
     letter-spacing: 5px;
     font-size: 5rem;
@@ -31,28 +38,27 @@ body {
     color: transparent;
     justify-self: center;
     align-self: center;
-    padding: 20px;
-}
-
-#conteinerMenuTopo{
     padding: 10px;
 }
 
+#conteinerMenuTopo {
+    padding: 10px;
+
+}
+
 #menuTopo {
-
-    width: 100%;
-    float: left;
+    display: flex;
+    justify-content: space-between;
+    gap: 10px;
+    font-family: var(--fonte-menu);
+    font-weight: bold;
     text-align: center;
+    list-style-type: none;
+
 }
 
-li {
-    padding-right: 20px;
-    display: inline-block;
-    list-style: none;
-}
 
 li a {
-    font-family: 'open_sansbold';
     font-size: 1.6em;
     text-decoration: none;
     color: var(--color-azul);
@@ -66,6 +72,12 @@ li a:hover {
     border-bottom: 4px solid var(--color-azul);
 }
 
+.icon {
+    width: 30px;
+    height: 30px;
+    color: white;
+}
+
 #rodape {
     position: fixed;
     width: 90%;
@@ -73,36 +85,43 @@ li a:hover {
     text-align: center;
 }
 
-#corpo {
+h2 {
+    font-family: var(--fonte-texto);
+    color: whitesmoke;
+    justify-self: center;
+}
+
+#campoAddTarefas {
     justify-self: center;
     width: 95%;
     max-width: 900px;
-    border-color: var(--color-azul);
+    border-color: rgb(46, 46, 46);
     border-style: solid;
     border-radius: 10px;
     padding: 10px;
-}
-
-h2 {
-    justify-self: center;
-}
-
-#add-tarefas {
     display: grid;
-    grid-template-columns: 04fr 1fr;
-    padding: 5px;
+    justify-content: center;
+    grid-template-areas:
+        "dataTarefa textoTarefa botaoAdicionarTarefa";
+    padding: 20px;
+    margin-top: 10px;
+    margin-bottom: 20px;
 }
 
-input{
-    width: 100%;
-    height: 30px;
-    border-radius: 5px;
-    border: 1px solid var(--color-azul);
-    padding-left: 10px;
-    font-family: var(--fonte-texto);
+#dataTarefa {
+    grid-area: dataTarefa;
+    width: 100px;
+    margin-right: 5px;
 }
 
-#botaoAdicionar {
+#textoTarefa {
+    grid-area: textoTarefa;
+    width: 400px;
+    margin-right: 5px;
+}
+
+.botaoAdicionarTarefa {
+    grid-area: botaoAdicionarTarefa;
     background-color: var(--color-azul);
     color: var(--color-azulClaro);
     width: 100px;
@@ -111,7 +130,36 @@ input{
     cursor: pointer;
 }
 
-#botaoAdicionar:hover {
+#listaTarefas {
+    justify-self: center;
+    border-color: rgb(46, 46, 46);
+    border-style: solid;
+    border-radius: 10px;
+    padding: 10px;
+    width: 95%;
+}
+
+input {
+    width: 100%;
+    height: 30px;
+    border-radius: 5px;
+    border: 1px solid var(--color-azul);
+    padding-left: 10px;
+    font-family: var(--fonte-texto);
+}
+
+.botaoAdicionar {
+    grid-area: botaoAdicionar;
+    margin-right: 5px;
+    background-color: var(--color-azul);
+    color: var(--color-azulClaro);
+    width: 100px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.botaoAdicionar:hover {
     background-color: var(--color-azulClaro);
     color: var(--color-azul);
 }
@@ -136,8 +184,30 @@ span {
     cursor: pointer;
 }
 
-#conteinerListaCompras{
-    display: block;
+#conteinerListaCompras {
+    display: grid;
+    grid-template-areas:
+        "quantidadeItens tipoItem itemCompra botaoAdicionar";
     justify-content: center;
-    align-items: center;  
+    spac
+}
+
+#quantidadeItens {
+    grid-area: quantidadeItens;
+    width: 50px;
+    margin-right: 5px;
+}
+
+#tipoItem {
+    grid-area: tipoItem;
+    width: 50px;
+    margin-right: 5px;
+
+}
+
+#itemCompra {
+    grid-area: itemCompra;
+    width: 200px;
+    margin-right: 5px;
+
 }

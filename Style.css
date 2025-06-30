@@ -72,6 +72,36 @@ li a:hover {
     border-bottom: 4px solid var(--color-azul);
 }
 
+th {
+    color: var(--color-azulClaro);
+}
+
+td {
+    color: white;
+}
+
+.tabelaTarefa {
+    width: 90%;
+}
+
+.centralizado {
+    display: grid;
+    justify-content: center;
+    align-items: center;
+}
+.colunaCentro{
+    border-right: solid 1px;
+    border-left: solid 1px;
+    border-color: white;
+}
+
+th,
+td {
+    border-bottom:solid 1px;
+    border-color: white;
+    background-color: rgb(51, 50, 50);
+}
+
 .icon {
     width: 30px;
     height: 30px;

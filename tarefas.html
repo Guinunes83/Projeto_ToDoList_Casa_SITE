@@ -12,12 +12,12 @@
         <h1>OrganizaLar</h1>
         <nav id="conteinerMenuTopo">
             <ul id="menuTopo">
-                <li><a href="/index.html">HOME</a></li>
-                <li><a href="/tarefas.html">TAREFAS</a></li>
-                <li><a href="#">COMPRAS</a></li>
-                <li><a href="#">FINANÇAS</a></li>
-                <li><a href="#">RECEITAS</a></li>
-                <li><a href="#">EVENTOS</a></li>
+                <li><a href="/index.html">Home</a></li>
+                <li><a href="/tarefas.html">Tarefas</a></li>
+                <li><a href="#">Compras</a></li>
+                <li><a href="#">Finanças</a></li>
+                <li><a href="#">Receitas</a></li>
+                <li><a href="#">Eventos</a></li>
             </ul>
 
         </nav>
@@ -29,11 +29,30 @@
         <section id="campoAddTarefas">
             <input type="date" name="Data" id="dataTarefa">
             <input id="textoTarefa" type="text" placeholder="Digite a Tarefa" name="texto-tarefa">
-            <button class="botaoAdicionarTarefa" id="botaoAdicionarTarefas" onclick="adicionarTarefa()">Adicionar</button>
+            <button class="botaoAdicionarTarefa" id="botaoAdicionarTarefas"
+                onclick="adicionarTarefa()">Adicionar</button>
         </section>
 
         <section id="listaTarefas">
-            <ul > </ul>
+            <table>
+                <tr>
+                    <th >DATA</th>
+                    <th class= "colunaCentro">TAREFA</th>
+                    <th class = "centralizado">OK?</th>
+                </tr>
+                <tr>
+                    <td>Peter</td>
+                    <td class="tabelaTarefa colunaCentro">Griffin</td>
+                    <td class = "centralizado">OK</td>
+                </tr>
+                <tr>
+                    <td>Lois</td>
+                    <td class = "colunaCentro">Griffin</td>
+                    <td class="centralizado">OK</td>
+                </tr>
+            </table>
+
+            <ul> </ul>
         </section>
 
     </main>
